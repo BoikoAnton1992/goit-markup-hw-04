@@ -104,6 +104,10 @@ body {
 
 .page-header{
     border-bottom: 1px solid #e7e9fc;
+    box-shadow:
+     0px 2px 1px rgba(46, 47, 66, 0.08),
+     0px 1px 1px rgba(46, 47, 66, 0.16),
+     0px 1px 6px rgba(46, 47, 66, 0.08); 
 }
 
 
@@ -153,21 +157,38 @@ body {
     color: #F4F4FD;
 }
 
-.link-header{
+.header-li{
     padding-top: 24px;
-    padding-bottom: 24px;
-    letter-spacing: 0.02em;
-    line-height: 1.5;
-    font-size: 16px;
-    color: #2e2f42;
-    text-decoration: none;
-    font-weight: 500;
+        padding-bottom: 24px;
+        letter-spacing: 0.02em;
+        line-height: 1.5;
+        font-size: 16px;
+        color: #2e2f42;
+        text-decoration: none;
+        font-weight: 500;
 }
 
-.link-header:hover,
-.link-header:focus {
-    color: #404bbf;
+.link-header{
+position: relative;
+transition: color 250ms cubic-bezier(04, 0, 0.2, 1);
 }
+
+.link-header:hover::after,
+.link-header:focus::after {
+        content: "";
+            left: 0;
+            bottom: -1px;
+            position: absolute;
+            width: 48px;
+            height: 4px;
+            border-radius: 2px;
+            background: #404bbf;
+}
+.link-header:hover,
+.link-header:focus{
+        color: #404bbf;
+}
+
 
 
 .header-address {
