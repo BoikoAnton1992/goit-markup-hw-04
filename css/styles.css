@@ -402,9 +402,6 @@ margin-bottom: 8px;
 
 }
 
-.our-portfolio-text:hover{
-    transform: translateY(0%);
-}
 
 .our-portfolio-section{
 padding-top: 120px;
@@ -436,13 +433,16 @@ row-gap: 48px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.our-portfolio-items:hover {
+.our-portfolio-items:hover .hidden-text-portfolio {
     transform: translateY(0%);
-    box-shadow: 
-    0px 1px 6px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16),
-      0px 2px 1px rgba(46, 47, 66, 0.08);
 }
+
+.container-img-portfolio{
+    position: relative;
+    overflow: hidden;
+}
+
+
 .portfolio-text-conteiner{
 position: relative;
 overflow: hidden;
@@ -452,6 +452,7 @@ overflow: hidden;
 
 .hidden-text-portfolio {
     position: absolute;
+    left: 0;
     top: 0;
     font-size: 16px;
     line-height: 1.5;
